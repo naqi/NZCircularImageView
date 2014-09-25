@@ -38,7 +38,7 @@
   usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle;
 
 - (void)setImageWithResizeURL:(NSString *)stringUrl
-  usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle
-                    completed:(SDWebImageCompletionBlock)completedBlock;
+             placeholderImage:(UIImage *)placeholder
+  usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle;
 
 @end

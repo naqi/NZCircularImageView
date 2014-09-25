@@ -67,14 +67,7 @@ static NSString* const kImageUrl = @"http://s13.postimg.org/daarzj713/parque_bar
     self.lbInfo.text = @"[PNG] 300x300";
     
     [self.imageView setImageWithResizeURL:kImageUrl
-              usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite
-                                completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-#ifdef NZDEBUG
-                                    NSLog(@"%s\nDownload completed", __PRETTY_FUNCTION__);
-#endif
-              }];
-    
-    //self.imageView.image = [UIImage imageNamed:@"300x300.png"];
+              usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 }
 
 - (IBAction)png400Clicked
