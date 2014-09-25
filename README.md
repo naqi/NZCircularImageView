@@ -73,12 +73,10 @@ circularImageView.image = [UIImage imageNamed:@"Default-Avatar"];
 [circularImageView setImageWithResizeURL:kImageUrl
              usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 //
-// ... with completion block
-[circularImageView setImageWithResizeURL:kImageUrl
-             usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite
-                               completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
-                                    NSLog(@"Download completed");
-              }];
+// ... with placeholder image
+[self.imageView setImageWithResizeURL:kImageUrl
+                     placeholderImage:[UIImage imageNamed:@"Sample"]
+          usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 ```
 
 To enable the logs in debug/release mode, add `#define NZDEBUG` at `*-Prefix.pch` file in your project.
