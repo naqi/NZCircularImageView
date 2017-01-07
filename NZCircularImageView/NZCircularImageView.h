@@ -41,4 +41,9 @@
              placeholderImage:(UIImage *)placeholder
   usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle;
 
+  - (void)setImageWithResizeURL:(NSString *)stringUrl
+               placeholderImage:(UIImage *)placeholder
+                        options:(SDWebImageOptions)options
+    usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle;
+
 @end

@@ -10,11 +10,6 @@
 
 @interface NZCircularImageView ()
 
-- (void)setImageWithResizeURL:(NSString *)stringUrl
-             placeholderImage:(UIImage *)placeholder
-                      options:(SDWebImageOptions)options
-  usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle;
-
 - (void)addMaskToBounds:(CGRect)bounds;
 - (void)setup;
 
@@ -125,14 +120,7 @@
         return;
     }
     
-    CGFloat scale = [[UIScreen mainScreen] scale];
-    CGFloat width = CGRectGetWidth(self.frame) * scale;
-    CGFloat height = CGRectGetHeight(self.frame) * scale;
-    
     NSMutableString *mStringUrl = [[NSMutableString alloc] initWithString:stringUrl];
-    [mStringUrl appendFormat:@"?width=%.0f", width];
-    [mStringUrl appendFormat:@"&height=%.0f", height];
-    [mStringUrl appendString:@"&mode=crop"];
     
 #ifdef NZDEBUG
     NSLog(@"%s\nDownload image from url: %@", __PRETTY_FUNCTION__, mStringUrl);
