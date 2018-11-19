@@ -96,20 +96,15 @@
 
 - (void)setImageWithResizeURL:(NSString *)stringUrl
 {
-    [self setImageWithResizeURL:stringUrl usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [self setImageWithResizeURL:stringUrl placeholderImage:nil];
 }
 
-- (void)setImageWithResizeURL:(NSString *)stringUrl usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle
+- (void)setImageWithResizeURL:(NSString *)stringUrl placeholderImage:(UIImage *)placeholder
 {
-    [self setImageWithResizeURL:stringUrl placeholderImage:nil usingActivityIndicatorStyle:activityStyle];
+    [self setImageWithResizeURL:stringUrl placeholderImage:placeholder options:kNilOptions];
 }
 
-- (void)setImageWithResizeURL:(NSString *)stringUrl placeholderImage:(UIImage *)placeholder usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle
-{
-    [self setImageWithResizeURL:stringUrl placeholderImage:placeholder options:kNilOptions usingActivityIndicatorStyle:activityStyle];
-}
-
-- (void)setImageWithResizeURL:(NSString *)stringUrl placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle
+- (void)setImageWithResizeURL:(NSString *)stringUrl placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options
 {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:stringUrl]];
     
@@ -127,7 +122,7 @@
 #endif
     
     NSURL *url = [NSURL URLWithString:mStringUrl];
-    [self setImageWithURL:url placeholderImage:placeholder options:options usingActivityIndicatorStyle:activityStyle];
+    [self setImageWithURL:url placeholderImage:placeholder options:options];
 }
 
 #pragma mark -
