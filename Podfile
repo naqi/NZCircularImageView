@@ -1,3 +1,5 @@
-platform :ios, '6.0'
-
-pod 'UIActivityIndicator-for-SDWebImage', '~> 1.0.3'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+target :"NZCircularImageView" do
+	pod 'SDWebImage', '~> 4.0'
+end

@@ -66,8 +66,7 @@ static NSString* const kImageUrl = @"http://s13.postimg.org/daarzj713/parque_bar
 {
     self.lbInfo.text = @"[PNG] 300x300";
     
-    [self.imageView setImageWithResizeURL:kImageUrl
-              usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [self.imageView setImageWithResizeURL:kImageUrl];    
 }
 
 - (IBAction)png400Clicked

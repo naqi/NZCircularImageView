@@ -122,7 +122,7 @@
 #endif
     
     NSURL *url = [NSURL URLWithString:mStringUrl];
-    [self setImageWithURL:url placeholderImage:placeholder options:options];
+    [self sd_setImageWithURL:url placeholderImage:placeholder options:options];
 }
 
 #pragma mark -
