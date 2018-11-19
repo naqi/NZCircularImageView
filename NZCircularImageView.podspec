@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.dependency 'UIActivityIndicator-for-SDWebImage'
   s.ios.frameworks = 'QuartzCore'
   s.source_files = 'NZCircularImageView/*.{h,m}'
-  s.source = { :git => 'https://github.com/NZN/NZCircularImageView.git', :tag => '0.0.5.1' }  
+  s.source = { :git => 'https://github.com/naqi/NZCircularImageView.git', :tag => '0.0.5.1' }  
 end
